@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+                      http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+  version="3.0">
+  <!-- 登录 -->
+	<servlet>
+		<servlet-name>Login</servlet-name>
+		<servlet-class>com.servlet.LoginServlet</servlet-class>
+	</servlet>
+	<!-- 注册 -->
+	<servlet>
+		<servlet-name>Regist</servlet-name>
+		<servlet-class>com.servlet.RegistServlet</servlet-class>
+	</servlet>
+	<!-- 聊天 -->
+	<servlet>
+		<servlet-name>ChatServlet</servlet-name>
+		<servlet-class>com.servlet.ChatServlet</servlet-class>
+	</servlet>
+	
+	
+	<!-- 登录 -->
+	<servlet-mapping>
+		<servlet-name>Login</servlet-name>
+		<url-pattern>/login</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 注册 -->
+	<servlet-mapping>
+		<servlet-name>Regist</servlet-name>
+		<url-pattern>/regist</url-pattern>
+	</servlet-mapping>
+	<!-- 聊天 -->
+	<servlet-mapping>
+		<servlet-name>ChatServlet</servlet-name>
+		<url-pattern>/chat</url-pattern>
+	</servlet-mapping>
+	
+	<filter>
+		<filter-name>BeforLoginFilter</filter-name>
+		<filter-class>com.filter.BeforLogin</filter-class>
+	</filter>
+	<filter-mapping>
+	<filter-name>BeforLoginFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+    <welcome-file-list>
+        <welcome-file>login.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<aiml>
+    <category>
+        <pattern>我明白了。</pattern>
+        <template>那你说你明白什么了呀</template>
+    </category>
+    <category>
+        <pattern>你是猪</pattern>
+        <template>
+        	<random>
+        		<li>你是猪</li>
+         		<li>你才是猪</li>
+            	<li>不，我是小狗</li>
+            	<li>不要侮辱猪</li>
+            	<li>不要侮辱你</li>
+     	</random>
+        </template>
+    </category>
+
+</aiml>

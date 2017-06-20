@@ -1,0 +1,9 @@
+#chat {
+	font-size: 12px;
+	line-height: 24px;
+	width:700px;
+	height: 80px;
+padding: 10px;
+	background: #FFFF00;
+	overflow-x: scroll;
+	}
